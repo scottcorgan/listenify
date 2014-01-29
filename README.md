@@ -32,6 +32,10 @@ clicked.then(handler2);
 
 ### Standalone
 
+```html
+<script src="/bower_components/prominent/dist/prominent.js"></script>
+```
+
 ```js
 var bind = window.prominent;
 var clicked = bind('.selector', 'click');
