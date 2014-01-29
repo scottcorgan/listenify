@@ -39,14 +39,13 @@
       "test/index.js"
     ],
     "browsers": [
-      "iexplore/10.0",
-      "iexplore/9.0",
       "firefox/16..latest",
       "chrome/22..latest",
       "safari/5.1..latest",
       "ipad/6.0..latest",
       "iphone/6.0..latest",
-      "android-browser/4.2..latest"
+      "iexplore/10.0",
+      "iexplore/9.0",
     ]
   },
   "dependencies": {
