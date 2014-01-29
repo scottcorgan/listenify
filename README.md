@@ -16,7 +16,9 @@ npm install prominent --save
 
 ```js
 var bind = require('prominent');
-var clicked = bind('.selector', 'click');
+var clicked = bind('.selector', 'click', {
+  delegate: 'body'
+});
 
 function handler1 (e) {
   // Do stuff
@@ -52,12 +54,14 @@ clicked.then(handler1);
 clicked.then(handler2);
 ```
 
-#### bind(selector, event)
+#### bind(selector, event[, options])
 
 Returns a promise
 
 * `selector` - a valid css selector or DOM node object
 * `event` - a valid DOM event (click, submit, etc.)
+* `options` - options to pass
+  * `delegate` - pass a valid css selector to delegate the event listener
  
 ## Run Tests
  
