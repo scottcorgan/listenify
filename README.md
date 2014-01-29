@@ -6,10 +6,18 @@ DOM event listeners as promises
  
 ## Install
  
+NPM 
+
 ```
 npm install prominent --save
 ```
- 
+
+Bower
+
+```
+bower install prominent --save
+```
+
 ## Usage
  
 ### Browserify
