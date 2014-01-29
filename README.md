@@ -54,7 +54,7 @@ clicked.then(handler1);
 clicked.then(handler2);
 ```
 
-#### bind(selector, event[, options])
+## bind(selector, event[, options])
 
 Returns a promise
 
