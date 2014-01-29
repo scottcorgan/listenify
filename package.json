@@ -4,7 +4,10 @@
   "description": "DOM event listeners as promises",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/testling | node_modules/.bin/tspec"
+    "test": "node_modules/.bin/testling | node_modules/.bin/tspec",
+    "bundle": "node_modules/.bin/browserify index.js -s prominent > dist/prominent.js",
+    "minify": "node_modules/.bin/uglifyjs dist/prominent.js -m -c -o dist/prominent.min.js",
+    "build": "npm run bundle && npm run minify"
   },
   "repository": {
     "type": "git",
