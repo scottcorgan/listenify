@@ -1,0 +1,53 @@
+{
+  "name": "prominent",
+  "version": "0.1.0",
+  "description": "DOM event listeners as promises",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/testling | node_modules/.bin/tspec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scottcorgan/prominent.git"
+  },
+  "keywords": [
+    "promise",
+    "event",
+    "dom"
+  ],
+  "author": "Scott Corgan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottcorgan/prominent/issues"
+  },
+  "devDependencies": {
+    "tape": "~2.3.2",
+    "testling": "~1.5.9",
+    "tap-spec": "~0.1.3",
+    "browserify": "~3.24.5",
+    "uglify-js": "~2.4.12",
+    "tiny-element": "~0.1.3",
+    "tiny-dom": "~0.1.0",
+    "tiny-trigger": "~0.1.2",
+    "promise": "~3.2.0"
+  },
+  "testling": {
+    "files": [
+      "test/index.js"
+    ],
+    "browsers": [
+      "iexplore/10.0",
+      "iexplore/9.0",
+      "firefox/16..latest",
+      "chrome/22..latest",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  },
+  "dependencies": {
+    "tiny-element": "~0.1.3",
+    "promise": "~3.2.0"
+  }
+}
