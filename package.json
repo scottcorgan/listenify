@@ -1,6 +1,6 @@
 {
   "name": "prominent",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DOM event listeners as promises",
   "main": "index.js",
   "scripts": {

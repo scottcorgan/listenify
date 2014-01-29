@@ -12,6 +12,8 @@ npm install prominent --save
  
 ## Usage
  
+### Browserify
+
 ```js
 var bind = require('prominent');
 var clicked = bind('.selector', 'click');
@@ -28,7 +30,25 @@ clicked.then(handler1);
 clicked.then(handler2);
 ```
 
-### bind(selector, event)
+### Standalone
+
+```js
+var bind = window.prominent;
+var clicked = bind('.selector', 'click');
+
+function handler1 (e) {
+  // Do stuff
+}
+
+function handler2 (e) {
+  // Do stuff
+}
+
+clicked.then(handler1);
+clicked.then(handler2);
+```
+
+#### bind(selector, event)
 
 Returns a promise
 
