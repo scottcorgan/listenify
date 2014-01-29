@@ -45,7 +45,7 @@
       "ipad/6.0..latest",
       "iphone/6.0..latest",
       "iexplore/10.0",
-      "iexplore/9.0",
+      "iexplore/9.0"
     ]
   },
   "dependencies": {
