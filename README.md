@@ -1,6 +1,6 @@
 # prominent
  
-Partially applied DOM event listeners. Make awesome use of [partial application](http://en.wikipedia.org/wiki/Partial_application).
+Partially applied DOM event listeners. Makes awesome use of [partial application](http://en.wikipedia.org/wiki/Partial_application).
 
 [![browser support](https://ci.testling.com/scottcorgan/prominent.png)](https://ci.testling.com/scottcorgan/prominent)
  
@@ -23,8 +23,8 @@ bower install prominent --save
 ### Browserify
 
 ```js
-var prominent = require('prominent');
-var clicked = prominent('.selector', 'click');
+var listen = require('prominent');
+var clicked = listen('.selector', 'click');
 
 function handler1 (e) {
   // Do stuff
@@ -47,8 +47,8 @@ clicked.off(); // No more listeners
 ```
 
 ```js
-var prominent = window.prominent;
-var clicked = window.prominent('.selector', 'click');
+var listen = window.prominent;
+var clicked = window.listen('.selector', 'click');
 
 function handler1 (e) {
   // Do stuff
@@ -69,12 +69,31 @@ clicked.off(handler1); // Removed this listner
 * `selector` - a valid css selector or DOM node object
 * `event` - a valid DOM event (click, submit, etc.)
 
+```js
+var listen = require('prominent');
+var clicked = listen('.selector', 'click');
+```
+
 Returns a partially applied function, which also has a number of properties and methods on it:
 
 * `off([listener])` - Removes event listeners. If no arguments are passed, it removes all listeners and event listeners. If you pass sthe listener function as an argument, that listener will be removed, but the rest will remain.
 * `element` - the DOM node associated with this listener
 * `type` - the type of event passed in (i.e, click, submit, etc);
 * `listeners` - an array of all the listeners on this bound element.
+
+```js
+var listen = require('prominent');
+var clicked = listen('.selector', 'click');
+
+console.log(clicked.element === document.querySelector('.selector')); // true
+console.log(clicked.type === 'click'); // true
+
+clicked.listeners.forEach(function (listener) {
+  // Do Stuff
+});
+
+clicked.off();
+```
  
 ## Run Tests
  
