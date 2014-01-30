@@ -24,9 +24,7 @@ bower install prominent --save
 
 ```js
 var bind = require('prominent');
-var clicked = bind('.selector', 'click', {
-  delegate: 'body'
-});
+var clicked = bind('.selector', 'click');
 
 function handler1 (e) {
   // Do stuff
@@ -48,7 +46,10 @@ clicked.then(handler2);
 
 ```js
 var bind = window.prominent;
-var clicked = bind('.selector', 'click');
+var options = {
+  delegate: 'body'
+};
+var clicked = bind('.selector', 'click', options);
 
 function handler1 (e) {
   // Do stuff
