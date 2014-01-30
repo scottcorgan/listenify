@@ -1,12 +1,12 @@
 {
   "name": "prominent",
   "main": "dist/prominent.js",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/scottcorgan/prominent",
   "authors": [
     "Scott Corgan <scottcorgan@gmail.com>"
   ],
-  "description": "DOM event listeners as promises",
+  "description": "Partially applied DOM event listeners",
   "keywords": [
     "promise",
     "event",
