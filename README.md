@@ -106,7 +106,7 @@ npm test
 
 ## Credits
 
-Huge thanks to the following for fix my code!
+Huge thanks to the following for fixing my code!
 
 * **[Matthias Le Brun](http://bloodyowl.github.io/)** - Helped me through fixing my borked promises implementation. Ultimately leading to using this with partial application.
-* **[Ben Lower](http://blowery.org/)** - Helped me avoid a wrong promises implementation.
+* **[Ben Lower](http://blowery.org/)** - Helped me avoid a wrong promises definition.
