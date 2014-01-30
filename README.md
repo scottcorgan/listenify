@@ -92,7 +92,7 @@ clicked.listeners.forEach(function (listener) {
   // Do Stuff
 });
 
-clicked.off();
+clicked.off(); // Removed all listeners
 ```
  
 ## Run Tests

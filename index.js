@@ -7,9 +7,9 @@ module.exports = function (selector, type) {
 };
  
 function _binder (selector, type) {
-  var node = element(selector);
+  instance.element = element(selector);
   
-  if (node) node.addEventListener(type, triggerListeners);
+  if (instance.element) instance.element.addEventListener(type, triggerListeners);
   
   function triggerListeners (e) {
     var len = instance.listeners.length;
@@ -25,13 +25,12 @@ function _binder (selector, type) {
   };
   
   instance.listeners = [];
-  instance.element = node;
   instance.selector = selector;
   instance.type = type;
   
   instance.off = function (listenerToRemove) {
-    if (node && !listenerToRemove) {
-      node.removeEventListener(type, triggerListeners);
+    if (instance.element && !listenerToRemove) {
+      instance.element.removeEventListener(type, triggerListeners);
       instance.listeners = [];
     }
     
