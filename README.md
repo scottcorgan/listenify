@@ -1,21 +1,21 @@
-# prominent
+# listenify
  
 Partially applied DOM event listeners. Makes awesome use of [partial application](http://en.wikipedia.org/wiki/Partial_application).
 
-[![browser support](https://ci.testling.com/scottcorgan/prominent.png)](https://ci.testling.com/scottcorgan/prominent)
+[![browser support](https://ci.testling.com/scottcorgan/listenify.png)](https://ci.testling.com/scottcorgan/listenify)
  
 ## Install
  
 NPM 
 
 ```
-npm install prominent --save
+npm install listenify --save
 ```
 
 Bower
 
 ```
-bower install prominent --save
+bower install listenify --save
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ bower install prominent --save
 ### Browserify
 
 ```js
-var listen = require('prominent');
+var listen = require('listenify');
 var clicked = listen('.selector', 'click');
 
 function handler1 (e) {
@@ -43,11 +43,11 @@ clicked.off(); // No more listeners
 ### Standalone
 
 ```html
-<script src="/bower_components/prominent/dist/prominent.js"></script>
+<script src="/bower_components/listenify/dist/listenify.js"></script>
 ```
 
 ```js
-var listen = window.prominent;
+var listen = window.listenify;
 var clicked = window.listen('.selector', 'click');
 
 function handler1 (e) {
@@ -64,13 +64,13 @@ clicked(handler2);
 clicked.off(handler1); // Removed this listner
 ```
 
-## prominent(selector, event)
+## listenify(selector, event)
 
 * `selector` - a valid css selector or DOM node object
 * `event` - a valid DOM event (click, submit, etc.)
 
 ```js
-var listen = require('prominent');
+var listen = require('listenify');
 var clicked = listen('.selector', 'click');
 ```
 
@@ -82,7 +82,7 @@ Returns a partially applied function, which also has a number of properties and 
 * `listeners` - an array of all the listeners on this bound element.
 
 ```js
-var listen = require('prominent');
+var listen = require('listenify');
 var clicked = listen('.selector', 'click');
 
 console.log(clicked.element === document.querySelector('.selector')); // true

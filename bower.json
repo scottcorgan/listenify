@@ -1,14 +1,15 @@
 {
-  "name": "prominent",
-  "main": "dist/prominent.js",
+  "name": "listenify",
+  "main": "dist/listenify.js",
   "version": "0.2.0",
-  "homepage": "https://github.com/scottcorgan/prominent",
+  "homepage": "https://github.com/scottcorgan/listenify",
   "authors": [
     "Scott Corgan <scottcorgan@gmail.com>"
   ],
   "description": "Partially applied DOM event listeners",
   "keywords": [
-    "promise",
+    "partial",
+    "listen",
     "event",
     "dom"
   ],

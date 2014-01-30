@@ -1,27 +1,28 @@
 {
-  "name": "prominent",
+  "name": "listenify",
   "version": "0.2.0",
   "description": "Partially applied DOM event listeners",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/testling | node_modules/.bin/tspec",
-    "bundle": "node_modules/.bin/browserify index.js -s prominent > dist/prominent.js",
-    "minify": "node_modules/.bin/uglifyjs dist/prominent.js -m -c -o dist/prominent.min.js",
+    "bundle": "node_modules/.bin/browserify index.js -s listenify > dist/listenify.js",
+    "minify": "node_modules/.bin/uglifyjs dist/listenify.js -m -c -o dist/listenify.min.js",
     "build": "npm run bundle && npm run minify"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/scottcorgan/prominent.git"
+    "url": "https://github.com/scottcorgan/listenify.git"
   },
   "keywords": [
-    "promise",
+    "partial",
+    "listen",
     "event",
     "dom"
   ],
   "author": "Scott Corgan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/scottcorgan/prominent/issues"
+    "url": "https://github.com/scottcorgan/listenify/issues"
   },
   "devDependencies": {
     "tape": "~2.3.2",
@@ -30,7 +31,6 @@
     "browserify": "~3.24.5",
     "uglify-js": "~2.4.12",
     "tiny-trigger": "~0.1.2",
-    "promise": "~3.2.0",
     "matches-selector": "~1.0.0"
   },
   "testling": {

@@ -3,10 +3,10 @@ var element = require('tiny-element');
 var indexesOf = require('indexes-of');
 
 module.exports = function (selector, type) {
-  return _binder(selector, type);
+  return listen(selector, type);
 };
  
-function _binder (selector, type) {
+function listen (selector, type) {
   instance.element = element(selector);
   
   if (instance.element) instance.element.addEventListener(type, triggerListeners);
